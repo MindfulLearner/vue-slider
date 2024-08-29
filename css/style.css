@@ -1,0 +1,22 @@
+/* 
+
+ */
+
+
+body {
+    background: black;
+    color: white;
+}
+
+
+.buttonPrev {
+    height: 40px;
+    width: 60px;
+}
+
+
+.buttonNext {
+    height: 40px;
+    width: 60px;
+}
+
