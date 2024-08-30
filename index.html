@@ -22,9 +22,13 @@
             </div>
             <!-- diversi img -->
             <div class="container-little-img">
-            <!-- problema -->
-                <div  class="card-little-img filter-black" v-for="(piccoleImmagini, i) in slide" :key="i">
-                    <img @click="clicker(i)" class="little-img" :src="piccoleImmagini.image" alt="">
+                <!-- problema -->
+                <div 
+                    v-for="(piccoleImmagini, index) in slide" 
+                    :key="index"
+                    :class="['card-little-img', { 'filter-black': index !== i }]"
+                    >
+                    <img @click="clicker(index)" class="little-img" :src="piccoleImmagini.image" alt="">
                 </div> 
             </div>
             <div class="mezzo">
