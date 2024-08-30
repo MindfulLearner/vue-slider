@@ -37,18 +37,21 @@ createApp (
                 timer: 3,
                 boolean: false,
                 pausa: false
+
             };
         },
         methods: {
             prevSlide() {
+                const slidesLunghezza = this.slide.length - 1;
                 if (this.i == 0){
-                    this.i = 4;
+                    this.i = slidesLunghezza;
                 } else {
                     this.i --;
                 }
             },
             nextSlide() {
-                if (this.i == 4) {
+                const slidesLunghezza = this.slide.length - 1;
+                if (this.i == slidesLunghezza) {
                     this.i = 0;
                 }else {
                     this.i ++; 
@@ -58,7 +61,6 @@ createApp (
                 this.i = joshua;
             },
             timerStart() {
-                this.timer = 3;
                 console.log("tempo mancante: " + this.timer);
 
                 if (this.timer > 0) {
@@ -79,11 +81,7 @@ createApp (
                             this.boolean = false;
                             console.log("prossimo");
                             this.timer = 3;
-                            if (this.i == 4) {
-                                this.i = 0;
-                            }else {
-                                this.i ++; 
-                            }
+                            this.nextSlide();
                             this.timerStart();
                         }
                     };
@@ -98,7 +96,7 @@ createApp (
                 this.pausa = false;
                 console.log('riprende?');
                 if (this.boolean) {
-                   this.timerStart(); 
+                    this.timerStart(); 
                 }
             }
         }

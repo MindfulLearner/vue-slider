@@ -28,8 +28,11 @@ body {
 .card-little-img {
     width: calc(100% / 5);
 }
+.filter-black {
+    filter: brightness(50%);
+}
 
-.little-img {
+.card-little-img > .little-img {
     height: 200px;
     width: 100%;
 }
