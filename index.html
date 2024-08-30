@@ -9,27 +9,29 @@
     </head>
     <body>
 
-        <div>
-            <button class="buttonNext" type="">+</button>
-            <button class="buttonPrev" type="">-</button>
-        </div>
-
-        <!-- grande img -->
-        <div>
+        <div id="app">
             <div>
-                <img src="" alt=""> 
-            </div> 
-        </div>
-        <!-- diversi img -->
-        <div>
+                <button @click="prevSlide" class="prev-button" type="button">-</button>
+                <button @click="nextSlide" class="next-button" type="button">+</button>
+            </div>
+            <!-- grande img  carosello-->
             <div>
-
-            </div> 
+                <div class="card-big-img">
+                    <img @mouseover="pausa1" @mouseleave="riprendi" class="big-img" :src="slide[i].image" alt=""> 
+                </div> 
+            </div>
+            <!-- diversi img -->
+            <div class="container-little-img">
+                <div class="card-little-img" v-for="(piccoleImmagini, i) in slide" :key="i">
+                    <img @click="clicker(i)" class="little-img" :src="piccoleImmagini.image" alt="">
+                </div> 
+            </div>
+            <div class="mezzo">
+                <button @click="timerStart" class="next-button" type="button">timer</button>
+            </div>
         </div>
 
-
-
-
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>   
         <script src="./scripts/script.js">
         </script> 
     </body>

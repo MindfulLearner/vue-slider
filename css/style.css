@@ -9,14 +9,43 @@ body {
 }
 
 
-.buttonPrev {
+.prev-button {
     height: 40px;
     width: 60px;
 }
 
 
-.buttonNext {
+.next-button {
     height: 40px;
     width: 60px;
 }
 
+.container-little-img {
+    display: flex;
+    width: 1200px;
+}
+
+.card-little-img {
+    width: calc(100% / 5);
+}
+
+.little-img {
+    height: 200px;
+    width: 100%;
+}
+
+.card-big-img {
+    width: 1200px;
+    height: 650px;
+}
+
+.big-img {
+    width: 100%;
+    height: 100%;
+}
+
+.mezzo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
